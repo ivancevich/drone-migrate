@@ -1,0 +1,28 @@
+build:
+  image: golang:1.7
+  environment:
+    - CGO_ENABLED=0
+  commands:
+    - make deps
+    - make vet
+    - make build
+    - make test
+
+publish:
+  docker:
+    username: $$DOCKER_USER
+    password: $$DOCKER_PASS
+    email: $$DOCKER_EMAIL
+    repo: ivancevich/drone-migrate
+    tag: latest
+    when:
+      branch: master
+
+plugin:
+  name: Migrate
+  desc: Database migration plugin
+  type: deploy
+  image: ivancevich/drone-migrate
+  labels:
+    - database
+    - migration
