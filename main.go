@@ -32,9 +32,18 @@ func main() {
 	migrationsPath := filepath.Join(workspace.Path, vargs.MigrationsPath)
 
 	if err, ok := migrate.UpSync(vargs.DatabaseURL, migrationsPath); !ok {
+		fmt.Println("Error migrating database:")
 		for _, e := range err {
-			fmt.Println("Error: ", e.Error())
+			fmt.Println(e.Error())
 		}
 		os.Exit(1)
 	}
+
+	version, err := migrate.Version(vargs.DatabaseURL, migrationsPath)
+	if err != nil {
+		fmt.Println("Error getting database version: ", err.Error())
+		os.Exit(1)
+	}
+
+	fmt.Printf("Database succesfully migrated to version %v", version)
 }
