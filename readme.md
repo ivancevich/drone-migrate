@@ -3,7 +3,7 @@ Database migration plugin for Drone CI
 
 ## Build
 ```bash
-make deps build docker
+make deps docker
 ```
 
 ## Publish
