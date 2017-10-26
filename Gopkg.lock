@@ -17,13 +17,13 @@
   branch = "master"
   name = "github.com/jmoiron/sqlx"
   packages = [".","reflectx"]
-  revision = "d9bd385d68c068f1fabb5057e3dedcbcbb039d0f"
+  revision = "3379e5993990b1f927fc8db926485e6f6becf2d2"
 
 [[projects]]
   branch = "master"
   name = "github.com/lib/pq"
   packages = [".","oid"]
-  revision = "b77235e3890a962fe8a6f8c4c7198679ca7814e7"
+  revision = "b609790bd85edf8e9ab7e0f8912750a786177bcf"
 
 [solve-meta]
   analyzer-name = "dep"
