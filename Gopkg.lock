@@ -10,20 +10,33 @@
 [[projects]]
   branch = "master"
   name = "github.com/gemnasium/migrate"
-  packages = ["driver","driver/postgres","file","migrate","migrate/direction","pipe"]
-  revision = "0e161f43df9892cb6f29f16cdbc98b50caa12d55"
+  packages = [
+    "driver",
+    "driver/postgres",
+    "file",
+    "migrate",
+    "migrate/direction",
+    "pipe"
+  ]
+  revision = "30abc3eda21e18208e819aaef77f3cf5d05d4be5"
 
 [[projects]]
   branch = "master"
   name = "github.com/jmoiron/sqlx"
-  packages = [".","reflectx"]
-  revision = "3379e5993990b1f927fc8db926485e6f6becf2d2"
+  packages = [
+    ".",
+    "reflectx"
+  ]
+  revision = "05cef0741ade10ca668982355b3f3f0bcf0ff0a8"
 
 [[projects]]
   branch = "master"
   name = "github.com/lib/pq"
-  packages = [".","oid"]
-  revision = "b609790bd85edf8e9ab7e0f8912750a786177bcf"
+  packages = [
+    ".",
+    "oid"
+  ]
+  revision = "19c8e9ad00952ce0c64489b60e8df88bb16dd514"
 
 [solve-meta]
   analyzer-name = "dep"
